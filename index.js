@@ -37,4 +37,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function playGame() {
+    for (let gamesPlayed = 0; gamesPlayed < 5; gamesPlayed++) {
+        playRound();
+    }
+}
 

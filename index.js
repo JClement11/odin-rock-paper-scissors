@@ -47,7 +47,8 @@ function playRound(playerSelection, computerSelection) {
     console.log(`Player Score: ${playerScore} Computer Score: ${computerScore}`);
 }
 
-function playGame() {
+/*
+*function playGame() {
     for (let gamesPlayed = 0; gamesPlayed < 5; gamesPlayed++) {
         playRound();
     }
@@ -62,5 +63,6 @@ function playGame() {
         console.log("It's a tie! Play again?");
     }
 }
+*/
 
 playGame();

@@ -59,7 +59,7 @@ function playGame() {
         console.log("Better luck next time! You lost the game!");
     }
     else {
-        console.log("It's a tie! Try again?");
+        console.log("It's a tie! Play again?");
     }
 }
 

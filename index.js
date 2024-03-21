@@ -7,11 +7,13 @@ function getComputerChoice() {
     return randomChoice;
 }
 
+/*
 function getPlayerChoice() {
     let playerChoice = prompt("Do you pick Rock, Paper, or Scissors?");
     playerChoice = playerChoice.toUpperCase();
     return playerChoice;
 }
+*/
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = getPlayerChoice();

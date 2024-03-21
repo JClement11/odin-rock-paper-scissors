@@ -16,7 +16,6 @@ function getPlayerChoice() {
 */
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
 
     if (playerSelection === computerSelection) {
@@ -67,4 +66,19 @@ function playRound(playerSelection, computerSelection) {
 }
 */
 
-playGame();
+const rockButton = document.querySelector(".rock");
+const paperButton = document.querySelector(".paper");
+const scissorsButton = document.querySelector(".scissors");
+
+rockButton.addEventListener("click", () => {
+    playerSelection = "ROCK";
+    playRound(playerSelection);
+});
+paperButton.addEventListener("click", () => {
+    playerSelection = "PAPER";
+    playRound(playerSelection);
+});
+scissorsButton.addEventListener("click", () => {
+    playerSelection = "SCISSORS";
+    playRound(playerSelection);
+});

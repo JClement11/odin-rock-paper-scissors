@@ -1,6 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
-const text = document.createElement("p");
+const outcomeText = document.createElement("p");
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
@@ -25,43 +25,43 @@ function playRound(playerSelection, computerSelection) {
     
     if (playerSelection === computerSelection) {
         document.querySelector(".outcome");
-        text.textContent = "It's a tie!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "It's a tie!";
+        outcomeDiv.appendChild(outcomeText);
     }
     else if (playerSelection === "ROCK" && computerSelection === "PAPER") {
         document.querySelector(".outcome");
-        text.textContent = "You lose the round! Paper beats Rock!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "You lose the round! Paper beats Rock!";
+        outcomeDiv.appendChild(outcomeText);
         computerScore++;
     }
     else if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
         document.querySelector(".outcome");
-        text.textContent = "You win the round! Rock beats Scissors!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "You win the round! Rock beats Scissors!";
+        outcomeDiv.appendChild(outcomeText);
         playerScore++;
     }
     else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
         document.querySelector(".outcome");
-        text.textContent = "You win the round! Paper beats Rock!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "You win the round! Paper beats Rock!";
+        outcomeDiv.appendChild(outcomeText);
         playerScore++;
     }
     else if (playerSelection === "PAPER" && computerSelection === "SCISSORS") {
         document.querySelector(".outcome");
-        text.textContent = "You lose the round! Scissors beats Paper!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "You lose the round! Scissors beats Paper!";
+        outcomeDiv.appendChild(outcomeText);
         computerScore++;
     }
     else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
         document.querySelector(".outcome");
-        text.textContent = "You lose the round! Rock beats Scissors!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "You lose the round! Rock beats Scissors!";
+        outcomeDiv.appendChild(outcomeText);
         computerScore++;
     }
     else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
         document.querySelector(".outcome");
-        text.textContent = "You win the round! Scissors beats Paper!";
-        outcomeDiv.appendChild(text);
+        outcomeText.textContent = "You win the round! Scissors beats Paper!";
+        outcomeDiv.appendChild(outcomeText);
         playerScore++;
     }
     console.log(`Player Score: ${playerScore} Computer Score: ${computerScore}`);

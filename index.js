@@ -17,7 +17,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
-    
+
     if (playerScore < 5 && computerScore < 5) {
         if (playerSelection === computerSelection) {
             document.querySelector(".outcome");
@@ -76,16 +76,15 @@ function playRound(playerSelection, computerSelection) {
         }
         document.querySelector(".outcome");
         currentScore.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;;
-        outcomeDiv.appendChild(currentScore);
+        outcomeDiv.insertBefore(currentScore, displayChoices);
     }
 
     if (playerScore === 5) {
         winner.textContent = "Congratulations! You win the game!";
-        outcomeDiv.appendChild(winner);
-    }
+        outcomeDiv.insertBefore(winner, currentScore);    }
     else if (computerScore === 5) {
         winner.textContent = "Better luck next time! The computer wins!";
-        outcomeDiv.appendChild(winner);
+        outcomeDiv.insertBefore(winner, currentScore);
     }   
 }
 

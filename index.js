@@ -2,6 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 const displayChoices = document.createElement("p");
 const outcomeText = document.createElement("p");
+const currentScore = document.createElement("p");
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
@@ -35,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
         document.querySelector(".outcome");
         displayChoices.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
         outcomeText.textContent = "You lose the round! Paper beats Rock!";
-        outcomeDiv.appendChild(displayChoices);
+        outcomeDiv.appendChild(displayChoices); 
         outcomeDiv.appendChild(outcomeText);
         computerScore++;
     }
@@ -79,7 +80,9 @@ function playRound(playerSelection, computerSelection) {
         outcomeDiv.appendChild(outcomeText);
         playerScore++;
     }
-    console.log(`Player Score: ${playerScore} Computer Score: ${computerScore}`);
+    document.querySelector(".outcome");
+    currentScore.textContent = `Player Score: ${playerScore} Computer Score: ${computerScore}`;;
+    outcomeDiv.appendChild(currentScore);
 }
 
 /*
